@@ -2,7 +2,7 @@
 
 
 def is_palindrome(s):
-    """Returns true/false if the string is palindrome"""
+    """O(n)"""
     left = 0
     right = len(s) - 1
 
