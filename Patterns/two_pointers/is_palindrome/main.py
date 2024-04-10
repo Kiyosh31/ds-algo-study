@@ -3,8 +3,12 @@
 
 def is_palindrome(s):
     """O(n)"""
+    if len(s) == 1:
+        return True
+
     left = 0
     right = len(s) - 1
+    s.lower()
 
     while left <= right:
         if s[left] != s[right]:

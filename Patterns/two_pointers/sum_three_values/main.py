@@ -21,19 +21,22 @@ def find_sum_of_three(nums, target):
     """O(n^2)"""
     nums.sort()
 
-    for i in range(len(nums) - 2):
+    for i in range(0, len(nums)-2):
         left = i + 1
         right = len(nums) - 1
 
-        while left <= right:
+        while left < right:
             triplet = nums[i] + nums[left] + nums[right]
 
             if triplet == target:
                 return True
+
             elif triplet < target:
                 left += 1
+
             else:
                 right -= 1
+    return False
 
 
 def main():
