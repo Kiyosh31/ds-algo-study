@@ -35,32 +35,3 @@ def length_of_longest_substring(s):
         seen.add(letter)
         longest_substring = max(longest_substring, right - left + 1)
     return longest_substring
-
-
-def main():
-    """main"""
-    test_cases = [
-        {
-            "input": "abcabcbb",
-            "output": 3
-        },
-        {
-            "input": "bbbbb",
-            "output": 1
-        },
-        {
-            "input": "pwwkew",
-            "output": 3
-        }
-    ]
-
-    for i, test in enumerate(test_cases):
-        print()
-        print("Test case #", i)
-        print("Input: ", test['input'])
-        print("Expected: ", test["output"])
-        print("result: ", length_of_longest_substring(test["input"]))
-
-
-if __name__ == '__main__':
-    main()

@@ -25,6 +25,14 @@ Explanation: There is no cycle in the linked list.
 """
 
 
+class ListNode:
+    """ListNode"""
+
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
 # This problem can be solved with 2 patterns
 # 1. Two pointers
 # 2. Hash Table
@@ -58,26 +66,3 @@ def detect_cycle_tp(head):
             return True
 
     return False
-
-
-class ListNode:
-    """ListNode"""
-
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
-def create_linked_list(nums):
-    """create list"""
-    if not nums:
-        return None
-
-    head = ListNode(nums[0])
-    current = head
-
-    for num in nums[1:]:
-        current.next = ListNode(num)
-        current = current.next
-
-    return head

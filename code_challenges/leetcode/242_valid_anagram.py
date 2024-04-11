@@ -44,31 +44,3 @@ def is_anagram_ht(s, t):
 def is_anagram_sr(s, t):
     """Sorting solution"""
     return sorted(s) == sorted(t)
-
-
-def main():
-    """main"""
-    test_cases = [
-        {
-            "s": "anagram",
-            "t": "nagaram",
-            "output": True
-        },
-        {
-            "s": "rat",
-            "t": "car",
-            "output": False
-        }
-    ]
-
-    for i, test in enumerate(test_cases):
-        print()
-        print("Test case #", i)
-        print("Input: ", test["s"], test["t"])
-        print("Expected: ", test["output"])
-        print("Hash table solution: ", is_anagram_ht(test["s"], test["t"]))
-        print("Sort solution: ", is_anagram_sr(test["s"], test["t"]))
-
-
-if __name__ == '__main__':
-    main()
