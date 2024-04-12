@@ -23,6 +23,9 @@ Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
 """
 
+# 2 pointers
+# O(n)
+
 
 def is_palindrome(s):
     """true/false if word is palindrom"""
