@@ -4,12 +4,11 @@ node from the end of the list and return its head.
 """
 
 
-class Node:
-    """__init__ will be used to make a LinkedListNode type object."""
-
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
+# class Node:
+#     """__init__ will be used to make a LinkedListNode type object."""
+#     def __init__(self, data, next=None):
+#         self.data = data
+#         self.next = next
 
 
 def remove_nth_last_node(head, n):
