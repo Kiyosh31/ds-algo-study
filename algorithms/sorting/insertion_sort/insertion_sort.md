@@ -8,3 +8,7 @@ comparing `i and i+1` if `i` is bigger then swap, and this will go on until we f
 | Time Complexity | Space Complexity |
 | --------------- | ---------------- |
 | O(n^2)          | O(1)             |
+
+# Visual
+
+![Insertion Sort](./IMG_0139.PNG)
