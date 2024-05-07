@@ -13,9 +13,12 @@ def insertion_sort(nums):
     for i in range(1, len(nums)):
         j = i - 1
         while j >= 0 and nums[j + 1] < nums[j]:
-            tmp = nums[j+1]
-            nums[j+1] = nums[j]
-            nums[j] = tmp
+            # tmp = nums[j+1]
+            # nums[j+1] = nums[j]
+            # nums[j] = tmp
+
+            # another way of swapping xD
+            nums[j+1], nums[j] = nums[j], nums[j+1]
             j -= 1
     return nums
 
