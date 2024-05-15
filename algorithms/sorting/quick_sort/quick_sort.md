@@ -1,6 +1,6 @@
 # Overview
 
-The idea behind quicksort is to pick an index, which is called the pivot, and partition the array such that every value to the left is less than or equal to the pivot and every value to the right is greater than the pivot.
+The idea behind quicksort is to pick an element of the array which is called the pivot, and partition the array such that every value to the left is less than or equal to the pivot and every value to the right is greater than the pivot.
 
 # Big(O)
 
@@ -17,4 +17,4 @@ Quicksort `is not` a stable algorithm because it exchanges non-adjacent elements
 
 # Visual
 
-![Insertion Sort](./)
+![Insertion Sort](./quicksort.jpeg)
