@@ -2,17 +2,25 @@
 
 
 def inorder(root):
-    """left -> value -> right"""
+    """
+    left
+    value
+    right
+    """
     if not root:
         return
 
     inorder(root.left)
-    print(root.val)
+    print(root.value)
     inorder(root.right)
 
 
 def preorder(root):
-    """value -> left -> right"""
+    """
+    value 
+    left
+    right
+    """
     if not root:
         return
 
@@ -22,7 +30,11 @@ def preorder(root):
 
 
 def postorder(root):
-    """left -> right -> value"""
+    """
+    left
+    right
+    value
+    """
     if not root:
         return
 

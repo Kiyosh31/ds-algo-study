@@ -1,21 +1,21 @@
 """Breadth first search"""
 
 
-def breadth_first_search(root):
-    """it traverse the tree by level"""
-    queue = []  # Queue
+def bfs(root):
+    """Breadth First Search"""
+    queue = []
 
     if root:
-        queue.append(root.value)
+        queue.append(root)
 
     level = 0
     while len(queue) > 0:
         print("level: ", level)
-        for i in range(len(queue)):
+        for _ in range(len(queue)):
             curr = queue.pop(0)
             print(curr.value)
             if curr.left:
-                queue.append(curr.value)
+                queue.append(curr.left)
             if curr.right:
                 queue.append(curr.right)
-        level += i
+        level += 1
