@@ -40,7 +40,7 @@ def insert(root, value):
     return root
 
 
-def min_value(root):
+def min_node_value(root):
     """Return the minimum value of tree"""
     curr = root
 
@@ -65,7 +65,7 @@ def remove(root, value):
         elif not root.right:
             return root.left
         else:
-            min_node = min_value(root.right)
+            min_node = min_node_value(root.right)
             root.value = min_node.value
             root.right = remove(root.right, min_node.value)
     return root
