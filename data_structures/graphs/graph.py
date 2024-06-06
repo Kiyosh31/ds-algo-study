@@ -27,3 +27,30 @@ class GraphNode:
     def __init__(self, val):
         self.val = val
         self.neighbors = []
+
+
+# Better for CODING INTERVIEWS
+# Key -> Node
+# Value -> list of neighbors
+adjList = {"A": [], "B": []}
+
+# Given a list of edges, build an adjacency list
+# This means Node A is connected to Node B
+edges = [
+    ["A", "B"],
+    ["B", "C"],
+    ["B", "E"],
+    ["C", "E"],
+    ["E", "D"]
+]
+
+adj_list = {}
+
+for source, destination in edges:
+    if source not in adj_list:
+        adj_list[source] = []
+    if destination not in adj_list:
+        adj_list[destination] = []
+    adj_list[source].append(destination)
+
+print(adj_list)

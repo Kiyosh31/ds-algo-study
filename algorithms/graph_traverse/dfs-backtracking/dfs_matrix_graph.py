@@ -4,13 +4,19 @@ Dfs/Backtracking
 Count the unique paths from the top left to the bottom right.
 A single path may only move along 0's and can't visit same cell
 more than once.
+
+
+Time complexity
+4 ^nm
+
+Space complexity
+O(m*n)
 """
 
 # Grid -> the matrix
 # r -> coordX
 # c -> coordY
 # visit -> flag to know if this node is visitted
-# O(n.m)
 
 
 def dfs(matrix_graph, r, c, visit):
