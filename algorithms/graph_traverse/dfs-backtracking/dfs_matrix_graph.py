@@ -22,16 +22,16 @@ O(m*n)
 def dfs(matrix_graph, r, c, visit):
     """traverse a graph to find the exit path"""
     # take out the dimensions of the matrix
-    ROWS, COLS = len(matrix_graph), len(matrix_graph[0])
+    rows, cols = len(matrix_graph), len(matrix_graph[0])
 
     # check if the actual position is out of matrix
     # did we visitted this position or
     # is this position blocked
-    if min(r, c) < 0 or r == ROWS or c == COLS or (r, c) in visit or grid[r][c] == 1:
+    if min(r, c) < 0 or r == rows or c == cols or (r, c) in visit or matrix_graph[r][c] == 1:
         return 0
 
     # did we reached the destination?
-    if r == ROWS - 1 and c == COLS - 1:
+    if r == rows - 1 and c == cols - 1:
         return 1
 
     # mark this coord as visitted

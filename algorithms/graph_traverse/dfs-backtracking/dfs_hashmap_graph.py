@@ -33,16 +33,16 @@ edges = [
     ["E", "D"]
 ]
 
-adj_list = {}
+adj_list1 = {}
 
 for source, destination in edges:
-    if source not in adj_list:
-        adj_list[source] = []
-    if destination not in adj_list:
-        adj_list[destination] = []
-    adj_list[source].append(destination)
+    if source not in adj_list1:
+        adj_list1[source] = []
+    if destination not in adj_list1:
+        adj_list1[destination] = []
+    adj_list1[source].append(destination)
 
-print(adj_list)
+print(adj_list1)
 
 
-print(dfs("A", "E", adj_list, set()))
+print(dfs("A", "E", adj_list1, set()))
