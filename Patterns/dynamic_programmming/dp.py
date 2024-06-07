@@ -30,6 +30,7 @@ def memoization(n, cache):
         return cache[n]
 
     cache[n] = memoization(n - 1, cache) + memoization(n - 2, cache)
+    print(cache)
     return cache[n]
 
 
