@@ -26,21 +26,22 @@ def is_anagram_ht(s, t):
     dict1 = {}
     dict2 = {}
 
-    for letter in enumerate(s):
-        if letter in dict1:
-            dict1[letter] += 1
-        else:
-            dict1[letter] = 1
+    for i in range(len(s)):
+        dict1[s[i]] = 1 + dict1.get(s[i], 0)
+        dict2[t[i]] = 1 + dict2.get(t[i], 0)
 
-    for letter in enumerate(t):
-        if letter in dict2:
-            dict2[letter] += 1
-        else:
-            dict2[letter] = 1
+    for c in dict2:
+        if dict1[c] != dict2.get(c, 0):
+            return False
 
-    return dict1 == dict2
+    return True
 
 
 def is_anagram_sr(s, t):
     """Sorting solution"""
     return sorted(s) == sorted(t)
+
+
+# True
+print(is_anagram_ht("racecar", "carrace"))
+print(is_anagram_sr("racecar", "carrace"))
